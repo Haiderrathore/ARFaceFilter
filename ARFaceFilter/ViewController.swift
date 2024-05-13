@@ -12,7 +12,7 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    
+    private var contentNode: SCNNode?
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Loaded")
@@ -23,20 +23,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
+        resetTracking()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,29 +39,47 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
 
-    // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
         
+        guard let sceneView = renderer as? ARSCNView, anchor is ARFaceAnchor else { return nil }
+        
+        let faceGeometry = ARSCNFaceGeometry(device: sceneView.device!)!
+        
+        let material = faceGeometry.firstMaterial!
+                
+        material.diffuse.contents = UIImage(named: "art.scnassets/1.png")
+        
+        material.lightingModel = .physicallyBased
+        
+        contentNode = SCNNode(geometry: faceGeometry)
+        
+        return contentNode
     }
     
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let faceGeometry = node.geometry as? ARSCNFaceGeometry,
+                    let faceAnchor = anchor as? ARFaceAnchor
+                    else { return }
+                
+            faceGeometry.update(from: faceAnchor.geometry)
     }
     
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+    private func resetTracking() {
+            guard ARFaceTrackingConfiguration.isSupported else { return }
+            let configuration = ARFaceTrackingConfiguration()
+            configuration.maximumNumberOfTrackedFaces = ARFaceTrackingConfiguration.supportedNumberOfTrackedFaces
+            configuration.isLightEstimationEnabled = true
+            sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+
+
+    private func displayErrorMessage(title: String, message: String) {
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let restartAction = UIAlertAction(title: "Restart Session", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                self.resetTracking()
+            }
+            alertController.addAction(restartAction)
+            present(alertController, animated: true, completion: nil)
     }
 }
