@@ -13,6 +13,8 @@
 		1D8F6DE32BF157B20084AC46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8F6DE12BF157B20084AC46 /* Main.storyboard */; };
 		1D8F6DE52BF157B30084AC46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8F6DE42BF157B30084AC46 /* Assets.xcassets */; };
 		1D8F6DE82BF157B30084AC46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8F6DE62BF157B30084AC46 /* LaunchScreen.storyboard */; };
+		1D8F6DF62BF2A2BA0084AC46 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F6DF42BF2A2BA0084AC46 /* FilterCollectionViewCell.swift */; };
+		1D8F6DF72BF2A2BA0084AC46 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8F6DF52BF2A2BA0084AC46 /* FilterCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		1D8F6DE22BF157B20084AC46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D8F6DE42BF157B30084AC46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D8F6DE72BF157B30084AC46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D8F6DF42BF2A2BA0084AC46 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D8F6DF52BF2A2BA0084AC46 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,8 @@
 		1D8F6DCF2BF157B20084AC46 = {
 			isa = PBXGroup;
 			children = (
+				1D8F6DF42BF2A2BA0084AC46 /* FilterCollectionViewCell.swift */,
+				1D8F6DF52BF2A2BA0084AC46 /* FilterCollectionViewCell.xib */,
 				1D8F6DDA2BF157B20084AC46 /* ARFaceFilter */,
 				1D8F6DD92BF157B20084AC46 /* Products */,
 			);
@@ -124,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8F6DDE2BF157B20084AC46 /* art.scnassets in Resources */,
+				1D8F6DF72BF2A2BA0084AC46 /* FilterCollectionViewCell.xib in Resources */,
 				1D8F6DE82BF157B30084AC46 /* LaunchScreen.storyboard in Resources */,
 				1D8F6DE52BF157B30084AC46 /* Assets.xcassets in Resources */,
 				1D8F6DE32BF157B20084AC46 /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8F6DE02BF157B20084AC46 /* ViewController.swift in Sources */,
+				1D8F6DF62BF2A2BA0084AC46 /* FilterCollectionViewCell.swift in Sources */,
 				1D8F6DDC2BF157B20084AC46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

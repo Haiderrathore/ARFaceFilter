@@ -9,21 +9,32 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
-
+class ViewController: UIViewController, ARSCNViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var filterImages:[String] = ["must1","must2","must3","must4"]
+    var filterNames:[String] = ["Mustache1","Mustache2","Mustache3","Mustache4"]
+    var selectedFilter  = ""
+  
+    
+    @IBOutlet weak var filtersCollectionsView: UICollectionView!
+    
     @IBOutlet var sceneView: ARSCNView!
     private var contentNode: SCNNode?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Loaded")
+            
+            let nibCell = UINib(nibName: "FilterCollectionViewCell", bundle: nil)
+            filtersCollectionsView.register(nibCell, forCellWithReuseIdentifier: "cell")
+            
         // Set the view's delegate
         sceneView.delegate = self
-        
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
         // Create a new scene
     }
+        
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,6 +42,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a session configuration
         resetTracking()
     }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -47,7 +59,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let material = faceGeometry.firstMaterial!
                 
-        material.diffuse.contents = UIImage(named: "art.scnassets/1.png")
+        material.diffuse.contents = UIImage(named: "art.scnassets/\(selectedFilter).png")
         
         material.lightingModel = .physicallyBased
         
@@ -72,7 +84,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 
-
     private func displayErrorMessage(title: String, message: String) {
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart Session", style: .default) { _ in
@@ -81,5 +92,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
             alertController.addAction(restartAction)
             present(alertController, animated: true, completion: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filterNames.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = filtersCollectionsView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FilterCollectionViewCell
+        
+        cell.filterImage.image = UIImage(named: filterImages[indexPath.row])
+        cell.filterName.text = filterNames[indexPath.row]
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedFilter = filterImages[indexPath.row]
+        print("Selected: \(selectedFilter)")
+        resetTracking()
     }
 }
