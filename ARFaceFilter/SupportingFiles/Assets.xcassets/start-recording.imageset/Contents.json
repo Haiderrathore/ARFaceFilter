@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "start-recording.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
