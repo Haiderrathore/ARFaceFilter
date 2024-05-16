@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,17 +18,17 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-1i-kOC">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <rect key="frame" x="4" y="0.0" width="142" height="150"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gir-WH-Khj">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="117"/>
+                                <rect key="frame" x="0.0" y="0.0" width="142" height="117"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="eDJ-g3-f3V"/>
+                                    <constraint firstAttribute="width" constant="142" id="eDJ-g3-f3V"/>
                                     <constraint firstAttribute="height" constant="117" id="kjE-GD-0MF"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7A6-zl-6L5">
-                                <rect key="frame" x="12" y="121" width="130" height="21"/>
+                                <rect key="frame" x="12" y="121" width="122" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NHb-ef-8eh"/>
                                 </constraints>
@@ -56,9 +57,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="FQM-1i-kOC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dj6-lq-3mL"/>
-                <constraint firstItem="FQM-1i-kOC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="a8d-IL-NNa"/>
+                <constraint firstItem="FQM-1i-kOC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="a8d-IL-NNa"/>
                 <constraint firstAttribute="bottom" secondItem="FQM-1i-kOC" secondAttribute="bottom" id="hig-zD-73u"/>
-                <constraint firstAttribute="trailing" secondItem="FQM-1i-kOC" secondAttribute="trailing" id="mKg-hT-fpr"/>
+                <constraint firstAttribute="trailing" secondItem="FQM-1i-kOC" secondAttribute="trailing" constant="4" id="mKg-hT-fpr"/>
             </constraints>
             <connections>
                 <outlet property="filterImage" destination="Gir-WH-Khj" id="ktg-Ef-1Zj"/>

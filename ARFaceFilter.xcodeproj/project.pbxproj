@@ -15,7 +15,43 @@
 		1D8F6DE82BF157B30084AC46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8F6DE62BF157B30084AC46 /* LaunchScreen.storyboard */; };
 		1D8F6DF62BF2A2BA0084AC46 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F6DF42BF2A2BA0084AC46 /* FilterCollectionViewCell.swift */; };
 		1D8F6DF72BF2A2BA0084AC46 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8F6DF52BF2A2BA0084AC46 /* FilterCollectionViewCell.xib */; };
+		1DDCC6122BF6363300AB6E25 /* ARFaceFilterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCC6102BF6363300AB6E25 /* ARFaceFilterModel.xcdatamodeld */; };
+		6807C7532BF4D0C000E2EE95 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C7522BF4D0BF00E2EE95 /* ViewModel.swift */; };
+		6807C75C2BF4D3FA00E2EE95 /* PersistanceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C7552BF4D11D00E2EE95 /* PersistanceStore.swift */; };
+		6807C75D2BF4D3FD00E2EE95 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C7562BF4D14800E2EE95 /* PersistentStorage.swift */; };
+		6807C75E2BF4D40900E2EE95 /* VideoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C75B2BF4D3B300E2EE95 /* VideoEntity+CoreDataProperties.swift */; };
+		6807C75F2BF4D40900E2EE95 /* VideoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C75A2BF4D3B300E2EE95 /* VideoEntity+CoreDataClass.swift */; };
+		6807C7632BF4FB0000E2EE95 /* VideosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6807C7622BF4FB0000E2EE95 /* VideosViewController.xib */; };
+		6807C7642BF4FB0000E2EE95 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C7612BF4FB0000E2EE95 /* VideosViewController.swift */; };
+		6807C7672BF4FB7700E2EE95 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807C7662BF4FB7700E2EE95 /* VideoTableViewCell.swift */; };
+		682A4D132BF631C200D16D7C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682A4D122BF631C200D16D7C /* FileManager.swift */; };
+		682A4D292BF6342400D16D7C /* ARVideoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682A4D282BF6341D00D16D7C /* ARVideoKit.framework */; };
+		682A4D2A2BF6342400D16D7C /* ARVideoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 682A4D282BF6341D00D16D7C /* ARVideoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		682A4D272BF6341D00D16D7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 682A4D232BF6341D00D16D7C /* ARVideoKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FBD604DA1FA969DD00EC9804;
+			remoteInfo = ARVideoKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6807C7422BF4C57C00E2EE95 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				682A4D2A2BF6342400D16D7C /* ARVideoKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D8F6DD82BF157B20084AC46 /* ARFaceFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARFaceFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +63,17 @@
 		1D8F6DE72BF157B30084AC46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D8F6DF42BF2A2BA0084AC46 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D8F6DF52BF2A2BA0084AC46 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		1DDCC6112BF6363300AB6E25 /* ARFaceFilterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ARFaceFilterModel.xcdatamodel; sourceTree = "<group>"; };
+		6807C7522BF4D0BF00E2EE95 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6807C7552BF4D11D00E2EE95 /* PersistanceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceStore.swift; sourceTree = "<group>"; };
+		6807C7562BF4D14800E2EE95 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		6807C75A2BF4D3B300E2EE95 /* VideoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6807C75B2BF4D3B300E2EE95 /* VideoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6807C7612BF4FB0000E2EE95 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		6807C7622BF4FB0000E2EE95 /* VideosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosViewController.xib; sourceTree = "<group>"; };
+		6807C7662BF4FB7700E2EE95 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		682A4D122BF631C200D16D7C /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		682A4D232BF6341D00D16D7C /* ARVideoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ARVideoKit.xcodeproj; path = SDK/ARVideoKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682A4D292BF6342400D16D7C /* ARVideoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +93,7 @@
 			children = (
 				1D8F6DDA2BF157B20084AC46 /* ARFaceFilter */,
 				1D8F6DD92BF157B20084AC46 /* Products */,
+				6807C73F2BF4C57C00E2EE95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +108,9 @@
 		1D8F6DDA2BF157B20084AC46 /* ARFaceFilter */ = {
 			isa = PBXGroup;
 			children = (
+				682A4D232BF6341D00D16D7C /* ARVideoKit.xcodeproj */,
+				682A4D102BF631B700D16D7C /* Extension */,
+				6807C7542BF4D11300E2EE95 /* Persistance */,
 				1D8F6DFA2BF35F670084AC46 /* Controller */,
 				1D8F6DF92BF35F430084AC46 /* View */,
 				1D8F6DF82BF35EF60084AC46 /* CustomCell */,
@@ -88,8 +140,10 @@
 		1D8F6DFA2BF35F670084AC46 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6807C7602BF4FAF100E2EE95 /* Videos */,
 				1D8F6DDB2BF157B20084AC46 /* AppDelegate.swift */,
 				1D8F6DDF2BF157B20084AC46 /* ViewController.swift */,
+				6807C7522BF4D0BF00E2EE95 /* ViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,6 +157,59 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		6807C73F2BF4C57C00E2EE95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6807C7542BF4D11300E2EE95 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				1DDCC6102BF6363300AB6E25 /* ARFaceFilterModel.xcdatamodeld */,
+				6807C7552BF4D11D00E2EE95 /* PersistanceStore.swift */,
+				6807C7562BF4D14800E2EE95 /* PersistentStorage.swift */,
+				6807C75A2BF4D3B300E2EE95 /* VideoEntity+CoreDataClass.swift */,
+				6807C75B2BF4D3B300E2EE95 /* VideoEntity+CoreDataProperties.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		6807C7602BF4FAF100E2EE95 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				6807C7652BF4FB3400E2EE95 /* Cells */,
+				6807C7612BF4FB0000E2EE95 /* VideosViewController.swift */,
+				6807C7622BF4FB0000E2EE95 /* VideosViewController.xib */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		6807C7652BF4FB3400E2EE95 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6807C7662BF4FB7700E2EE95 /* VideoTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		682A4D102BF631B700D16D7C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				682A4D122BF631C200D16D7C /* FileManager.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		682A4D242BF6341D00D16D7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				682A4D282BF6341D00D16D7C /* ARVideoKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +220,7 @@
 				1D8F6DD42BF157B20084AC46 /* Sources */,
 				1D8F6DD52BF157B20084AC46 /* Frameworks */,
 				1D8F6DD62BF157B20084AC46 /* Resources */,
+				6807C7422BF4C57C00E2EE95 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +257,12 @@
 			mainGroup = 1D8F6DCF2BF157B20084AC46;
 			productRefGroup = 1D8F6DD92BF157B20084AC46 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 682A4D242BF6341D00D16D7C /* Products */;
+					ProjectRef = 682A4D232BF6341D00D16D7C /* ARVideoKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D8F6DD72BF157B20084AC46 /* ARFaceFilter */,
@@ -156,11 +270,22 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		682A4D282BF6341D00D16D7C /* ARVideoKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ARVideoKit.framework;
+			remoteRef = 682A4D272BF6341D00D16D7C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		1D8F6DD62BF157B20084AC46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6807C7632BF4FB0000E2EE95 /* VideosViewController.xib in Resources */,
 				1D8F6DDE2BF157B20084AC46 /* art.scnassets in Resources */,
 				1D8F6DF72BF2A2BA0084AC46 /* FilterCollectionViewCell.xib in Resources */,
 				1D8F6DE82BF157B30084AC46 /* LaunchScreen.storyboard in Resources */,
@@ -176,9 +301,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6807C7642BF4FB0000E2EE95 /* VideosViewController.swift in Sources */,
+				6807C75E2BF4D40900E2EE95 /* VideoEntity+CoreDataProperties.swift in Sources */,
+				6807C75F2BF4D40900E2EE95 /* VideoEntity+CoreDataClass.swift in Sources */,
+				1DDCC6122BF6363300AB6E25 /* ARFaceFilterModel.xcdatamodeld in Sources */,
+				682A4D132BF631C200D16D7C /* FileManager.swift in Sources */,
+				6807C7672BF4FB7700E2EE95 /* VideoTableViewCell.swift in Sources */,
 				1D8F6DE02BF157B20084AC46 /* ViewController.swift in Sources */,
 				1D8F6DF62BF2A2BA0084AC46 /* FilterCollectionViewCell.swift in Sources */,
+				6807C7532BF4D0C000E2EE95 /* ViewModel.swift in Sources */,
+				6807C75C2BF4D3FA00E2EE95 /* PersistanceStore.swift in Sources */,
 				1D8F6DDC2BF157B20084AC46 /* AppDelegate.swift in Sources */,
+				6807C75D2BF4D3FD00E2EE95 /* PersistentStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,9 +464,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MXW9X57F2Y;
+				DEVELOPMENT_TEAM = 8C93AHGYPE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -340,12 +475,13 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.haider.ARFaceFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haider.ARFaceFilter.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,9 +496,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MXW9X57F2Y;
+				DEVELOPMENT_TEAM = 8C93AHGYPE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -370,12 +507,13 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.haider.ARFaceFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haider.ARFaceFilter.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -405,6 +543,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DDCC6102BF6363300AB6E25 /* ARFaceFilterModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DDCC6112BF6363300AB6E25 /* ARFaceFilterModel.xcdatamodel */,
+			);
+			currentVersion = 1DDCC6112BF6363300AB6E25 /* ARFaceFilterModel.xcdatamodel */;
+			name = ARFaceFilterModel.xcdatamodeld;
+			path = /Users/rathore/Documents/iOS_Projects/ARFaceFilter/ARFaceFilter/Persistance/ARFaceFilterModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1D8F6DD02BF157B20084AC46 /* Project object */;
 }

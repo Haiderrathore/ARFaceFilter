@@ -1,8 +1,11 @@
-//
-//  ViewModel.swift
-//  ARFaceFilter
-//
-//  Created by Umair Afzal on 15/05/2024.
-//
 
 import Foundation
+
+class ViewModel: NSObject {
+    
+    private let persistanceStore = PersistanceStore()
+
+    func saveVideoUrlInCoreData(id: String, url: String) {
+        persistanceStore.saveVideo(id: id, url: url)
+    }
+}

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HR9-8n-PnW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HR9-8n-PnW">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -20,9 +21,12 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                             </arscnView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x5U-1w-rZX">
-                                <rect key="frame" x="0.0" y="653" width="393" height="155"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x5U-1w-rZX">
+                                <rect key="frame" x="0.0" y="583" width="393" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="Mn9-7y-BFD"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Q1X-t9-gLq">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,7 +35,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="h0g-W5-RQu">
-                                        <rect key="frame" x="0.0" y="27.666666666666668" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="7.666666666666667" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pJt-8b-Oqi">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -44,15 +48,28 @@
                                     <outlet property="delegate" destination="BV1-FR-VrT" id="it5-HO-pxS"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIZ-Eo-FIl">
+                                <rect key="frame" x="146.66666666666666" y="722" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JU2-3X-TY3"/>
+                                    <constraint firstAttribute="height" constant="100" id="h6X-Pz-y8Q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="start-recording"/>
+                                <connections>
+                                    <action selector="captureButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="kne-DR-osY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="x5U-1w-rZX" secondAttribute="bottom" constant="10" id="2Ir-L0-eg1"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="x5U-1w-rZX" secondAttribute="bottom" constant="120" id="2Ir-L0-eg1"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="aIZ-Eo-FIl" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="XYY-gC-zeI"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
-                            <constraint firstItem="x5U-1w-rZX" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="550" id="gFC-d0-gBy"/>
+                            <constraint firstAttribute="bottom" secondItem="aIZ-Eo-FIl" secondAttribute="bottom" constant="30" id="e2Y-SM-FjB"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="x5U-1w-rZX" secondAttribute="trailing" id="lyf-fz-xVX"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                             <constraint firstItem="x5U-1w-rZX" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="tla-Mi-PEa"/>
@@ -61,6 +78,7 @@
                     <navigationItem key="navigationItem" id="Mjm-Wp-OJ8"/>
                     <connections>
                         <outlet property="filtersCollectionsView" destination="x5U-1w-rZX" id="vLh-SS-oPi"/>
+                        <outlet property="recordButton" destination="aIZ-Eo-FIl" id="WFx-DO-0Xo"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                     </connections>
                 </viewController>
@@ -88,6 +106,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="start-recording" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

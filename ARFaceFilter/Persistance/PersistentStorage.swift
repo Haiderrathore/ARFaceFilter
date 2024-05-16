@@ -1,9 +1,3 @@
-//
-//  PersistentStorage.swift
-//  TargetofsAssessment
-//
-//  Created by Zohaib Afzal on 24/04/2024.
-//
 
 import Foundation
 import CoreData
@@ -19,7 +13,7 @@ final class PersistentStorage {
     
     lazy var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "TargetofsAssesmentStore")
+        let container = NSPersistentContainer(name: "ARFaceFilterModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 
@@ -55,21 +49,5 @@ final class PersistentStorage {
             debugPrint(error)
         }
         return nil
-    }
-    
-    func fetchRecord<T: NSManagedObject>(managedObject: T.Type, withId id: String) -> T? {
-        let managedContext = context
-        
-        let fetchRequest = managedObject.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "id == %@", id)
-        fetchRequest.fetchLimit = 1
-        
-        do {
-            guard let record = try PersistentStorage.shared.context.fetch(fetchRequest) as? [T] else {return nil}
-            return record.first // Return the first record if found
-        } catch {
-            print("Error fetching record: \(error)")
-            return nil
-        }
     }
 }

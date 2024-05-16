@@ -1,8 +1,11 @@
-//
-//  FileManager.swift
-//  ARFaceFilter
-//
-//  Created by Umair Afzal on 16/05/2024.
-//
 
 import Foundation
+
+
+extension FileManager {
+    static func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+}

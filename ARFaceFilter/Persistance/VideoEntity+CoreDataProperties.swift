@@ -1,28 +1,31 @@
-//
-//  ImageEntity+CoreDataProperties.swift
-//  TargetofsAssessment
-//
-//  Created by Zohaib Afzal on 24/04/2024.
-//
-//
 
 import Foundation
 import CoreData
 
 
-extension ImageEntity {
+extension VideoEntity {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<ImageEntity> {
-        return NSFetchRequest<ImageEntity>(entityName: "ImageEntity")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<VideoEntity> {
+        return NSFetchRequest<VideoEntity>(entityName: "VideoEntity")
     }
 
     @NSManaged public var id: String?
     @NSManaged public var localUrl: String?
-
 }
 
-extension ImageEntity : Identifiable {
-    func convertToImage() -> String? {
-        return self.localUrl
+extension VideoEntity : Identifiable {
+    func convertToVideo() -> Video {
+        return Video(id: id, localUrl: localUrl)
+    }
+}
+
+
+class Video {
+    var id: String?
+    var localUrl: String?
+    
+    init(id: String? = nil, localUrl: String? = nil) {
+        self.id = id
+        self.localUrl = localUrl
     }
 }
